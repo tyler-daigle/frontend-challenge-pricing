@@ -187,6 +187,7 @@ body {
     margin: 0 auto;
     width: 50%;
   }
+
   .billing-frequency-container {
     justify-content: center;
     gap: 1rem;
@@ -194,5 +195,19 @@ body {
   .cta-button {
     width: 70%;
     max-width: 300px;
+  }
+}
+@media (min-width: 1440px) {
+  .details-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .cta-button {
+    width: 40%;
+    max-width: 300px;
+  }
+
+  .details-list-item {
+    text-align: left;
   }
 }
