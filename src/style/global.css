@@ -159,6 +159,12 @@ body {
   font-weight: 800;
   font-size: 1rem;
   border-radius: 500px;
+  cursor: pointer;
+}
+
+.cta-button:active {
+  background-color: var(--cta-text);
+  color: var(--cta-bg-color);
 }
 
 @media (min-width: 450px) {
@@ -186,7 +192,7 @@ body {
     gap: 1rem;
   }
   .cta-button {
-    width: 50%;
+    width: 70%;
     max-width: 300px;
   }
 }

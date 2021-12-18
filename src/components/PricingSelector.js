@@ -11,8 +11,7 @@ export default function PricingSelector() {
     { views: "1M PAGEVIEWS", priceMonthly: "$36", priceYearly: "$27" },
   ];
 
-  const [yearlyBilling, setYearlyBilling] = useState(true);
-  const [pageViewSelector, setPageViewSelector] = useState(0);
+  const [yearlyBilling, setYearlyBilling] = useState(false);
   const [currentPricing, setCurrentPricing] = useState(0);
 
   const { views } = pricingList[currentPricing];
@@ -40,7 +39,6 @@ export default function PricingSelector() {
           <label className="billing-type-label" htmlFor="frequency-toggle">
             Monthly Billing
           </label>
-          {/* <input type="checkbox" id="frequency-toggle" /> */}
           <FrequencySwitch
             checked={yearlyBilling}
             onChangeHandler={frequencyChangeHandler}
