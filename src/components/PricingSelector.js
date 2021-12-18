@@ -1,4 +1,5 @@
 import { useState } from "react";
+import FrequencySwitch from "./FrequencySwitch";
 import PriceSlider from "./PriceSlider";
 
 export default function PricingSelector() {
@@ -20,6 +21,7 @@ export default function PricingSelector() {
     : pricingList[currentPricing].priceMonthly;
 
   const onSliderChange = (e) => setCurrentPricing(e.target.value);
+  const frequencyChangeHandler = (e) => setYearlyBilling(e.target.checked);
 
   return (
     <section>
@@ -38,7 +40,11 @@ export default function PricingSelector() {
           <label className="billing-type-label" htmlFor="frequency-toggle">
             Monthly Billing
           </label>
-          <input type="checkbox" id="frequency-toggle" />
+          {/* <input type="checkbox" id="frequency-toggle" /> */}
+          <FrequencySwitch
+            checked={yearlyBilling}
+            onChangeHandler={frequencyChangeHandler}
+          />
           <label className="billing-type-label" htmlFor="frequency-toggle">
             Yearly Billing
           </label>
