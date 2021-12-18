@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./style/global.css";
 
-function App() {
+import Hero from "./components/Hero";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="main-container">
+        <Hero />
+
+        <div className="inner-container">
+          <div className="details-container">
+            <section>
+              <ul className="details-list">
+                <li className="details-list-item">
+                  <span className="checkmark">✔️</span>Unlimited websites
+                </li>
+                <li className="details-list-item">
+                  <span className="checkmark">✔️</span>100% data ownership
+                </li>
+                <li className="details-list-item">
+                  <span className="checkmark">✔️</span>Email reports
+                </li>
+              </ul>
+            </section>
+            <button type="button" className="cta-button">
+              Start my trial
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
